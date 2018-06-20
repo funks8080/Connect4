@@ -106,7 +106,8 @@ namespace WpfApplication1.ViewModels
                 }
 
                 var winnerDialog = new WinnerAlert(playerwin);
-                winnerDialog.Show();
+                winnerDialog.Owner = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+                winnerDialog.ShowDialog();
 
                 ResetGame();
             }

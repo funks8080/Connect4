@@ -30,6 +30,7 @@ namespace WpfApplication1.Views
 
         private void OKButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            DialogResult = true;
             this.Close();
         }
         
