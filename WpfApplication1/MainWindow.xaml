@@ -1,0 +1,97 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:views = "clr-namespace:WpfApplication1.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="900">
+    <Grid>
+
+        <StackPanel VerticalAlignment="Center">
+            <views:GameView x:Name = "GameViewControl" Loaded = "GameViewControl_Loaded" VerticalAlignment="Center"/>
+        </StackPanel>
+
+    </Grid>
+    <!--<Grid Name="GameBoard" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        --><!-- You need to specify how many rows you'll need --><!--
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Image Name="Spot00" Source="Pictures/square.fw.png" Grid.Row="0" Grid.Column="0"/>
+        <Image Name="Spot01" Source="Pictures/square.fw.png" Grid.Row="0" Grid.Column="1"/>
+        <Image Name="Spot02" Source="Pictures/square.fw.png" Grid.Row="0" Grid.Column="2"/>
+        <Image Name="Spot03" Source="Pictures/square.fw.png" Grid.Row="0" Grid.Column="3"/>
+        <Image Name="Spot04" Source="Pictures/square.fw.png" Grid.Row="0" Grid.Column="4"/>
+        <Image Name="Spot05" Source="Pictures/square.fw.png" Grid.Row="0" Grid.Column="5"/>
+        <Image Name="Spot06" Source="Pictures/square.fw.png" Grid.Row="0" Grid.Column="6"/>
+        <Image Name="Spot10" Source="Pictures/square.fw.png" Grid.Row="1" Grid.Column="0"/>
+        <Image Name="Spot11" Source="Pictures/square.fw.png" Grid.Row="1" Grid.Column="1"/>
+        <Image Name="Spot12" Source="Pictures/square.fw.png" Grid.Row="1" Grid.Column="2"/>
+        <Image Name="Spot13" Source="Pictures/square.fw.png" Grid.Row="1" Grid.Column="3"/>
+        <Image Name="Spot14" Source="Pictures/square.fw.png" Grid.Row="1" Grid.Column="4"/>
+        <Image Name="Spot15" Source="Pictures/square.fw.png" Grid.Row="1" Grid.Column="5"/>
+        <Image Name="Spot16" Source="Pictures/square.fw.png" Grid.Row="1" Grid.Column="6"/>
+        <Image Name="Spot20" Source="Pictures/square.fw.png" Grid.Row="2" Grid.Column="0"/>
+        <Image Name="Spot21" Source="Pictures/square.fw.png" Grid.Row="2" Grid.Column="1"/>
+        <Image Name="Spot22" Source="Pictures/square.fw.png" Grid.Row="2" Grid.Column="2"/>
+        <Image Name="Spot23" Source="Pictures/square.fw.png" Grid.Row="2" Grid.Column="3"/>
+        <Image Name="Spot24" Source="Pictures/square.fw.png" Grid.Row="2" Grid.Column="4"/>
+        <Image Name="Spot25" Source="Pictures/square.fw.png" Grid.Row="2" Grid.Column="5"/>
+        <Image Name="Spot26" Source="Pictures/square.fw.png" Grid.Row="2" Grid.Column="6"/>
+        <Image Name="Spot30" Source="Pictures/square.fw.png" Grid.Row="3" Grid.Column="0"/>
+        <Image Name="Spot31" Source="Pictures/square.fw.png" Grid.Row="3" Grid.Column="1"/>
+        <Image Name="Spot32" Source="Pictures/square.fw.png" Grid.Row="3" Grid.Column="2"/>
+        <Image Name="Spot33" Source="Pictures/square.fw.png" Grid.Row="3" Grid.Column="3"/>
+        <Image Name="Spot34" Source="Pictures/square.fw.png" Grid.Row="3" Grid.Column="4"/>
+        <Image Name="Spot35" Source="Pictures/square.fw.png" Grid.Row="3" Grid.Column="5"/>
+        <Image Name="Spot36" Source="Pictures/square.fw.png" Grid.Row="3" Grid.Column="6"/>
+        <Image Name="Spot40" Source="Pictures/square.fw.png" Grid.Row="4" Grid.Column="0"/>
+        <Image Name="Spot41" Source="Pictures/square.fw.png" Grid.Row="4" Grid.Column="1"/>
+        <Image Name="Spot42" Source="Pictures/square.fw.png" Grid.Row="4" Grid.Column="2"/>
+        <Image Name="Spot43" Source="Pictures/square.fw.png" Grid.Row="4" Grid.Column="3"/>
+        <Image Name="Spot44" Source="Pictures/square.fw.png" Grid.Row="4" Grid.Column="4"/>
+        <Image Name="Spot45" Source="Pictures/square.fw.png" Grid.Row="4" Grid.Column="5"/>
+        <Image Name="Spot46" Source="Pictures/square.fw.png" Grid.Row="4" Grid.Column="6"/>
+        <Image Name="Spot50" Source="Pictures/square.fw.png" Grid.Row="5" Grid.Column="0"/>
+        <Image Name="Spot51" Source="Pictures/square.fw.png" Grid.Row="5" Grid.Column="1"/>
+        <Image Name="Spot52" Source="Pictures/square.fw.png" Grid.Row="5" Grid.Column="2"/>
+        <Image Name="Spot53" Source="Pictures/square.fw.png" Grid.Row="5" Grid.Column="3"/>
+        <Image Name="Spot54" Source="Pictures/square.fw.png" Grid.Row="5" Grid.Column="4"/>
+        <Image Name="Spot55" Source="Pictures/square.fw.png" Grid.Row="5" Grid.Column="5"/>
+        <Image Name="Spot56" Source="Pictures/square.fw.png" Grid.Row="5" Grid.Column="6"/>
+        <Button Name="DropColumn0" Tag="0" Content="Drop Piece" Grid.Row="6" Grid.Column="0" Click="DropPieceClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn1" Tag="1" Content="Drop Piece" Grid.Row="6" Grid.Column="1" Click="DropPieceClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn2" Tag="2" Content="Drop Piece" Grid.Row="6" Grid.Column="2" Click="DropPieceClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn3" Tag="3" Content="Drop Piece" Grid.Row="6" Grid.Column="3" Click="DropPieceClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn4" Tag="4" Content="Drop Piece" Grid.Row="6" Grid.Column="4" Click="DropPieceClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn5" Tag="5" Content="Drop Piece" Grid.Row="6" Grid.Column="5" Click="DropPieceClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn6" Tag="6" Content="Drop Piece" Grid.Row="6" Grid.Column="6" Click="DropPieceClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="Reset" Tag="7" Content="Reset" Grid.Row="7" Grid.Column="3" Click="ResetGameClicked" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        
+        <WrapPanel Grid.Row="7" Grid.Column="1" MaxWidth="100">
+            <Label Name="ScoreLabel" Content="Score:" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Padding="0"/>
+            <Label Name="P1ScoreLabel" Content="Player 1 - " FontSize="12" Padding="20 0 0 0"/>
+            <TextBlock Name="P1Score" Text="{Binding Player1Score}" FontSize="12" Padding="0"/>
+            <Label Name="P2ScoreLabel" Content="Player 2 - " FontSize="12" Padding="20 0 0 0"/>
+            <TextBlock Name="P2Score" Text="{Binding Player2Score}" FontSize="12" Padding="0"/>
+        </WrapPanel>
+    </Grid>-->
+</Window>

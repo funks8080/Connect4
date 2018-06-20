@@ -1,0 +1,11 @@
+﻿<Application x:Class="WpfApplication1.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApplication1"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <BitmapImage x:Key="open" UriSource="square.fw.png" />
+        <BitmapImage x:Key="player1" UriSource="player1.fw.png" />
+        <BitmapImage x:Key="player2" UriSource="player2.fw.png" />
+    </Application.Resources>
+</Application>

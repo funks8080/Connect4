@@ -1,0 +1,438 @@
+﻿<UserControl x:Class="WpfApplication1.Views.GameView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1.Views"
+        xmlns:converters="clr-namespace:WpfApplication1.Converters"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Height="850" Width="900">
+    <UserControl.Resources>
+        <converters:MultiDimensionalCoverter x:Key="MultiDimensionalCoverter"/>
+        <system:Int32 x:Key="0">0</system:Int32>
+        <system:Int32 x:Key="1">1</system:Int32>
+        <system:Int32 x:Key="2">2</system:Int32>
+        <system:Int32 x:Key="3">3</system:Int32>
+        <system:Int32 x:Key="4">4</system:Int32>
+        <system:Int32 x:Key="5">5</system:Int32>
+        <system:Int32 x:Key="6">6</system:Int32>
+        <system:Int32 x:Key="7">7</system:Int32>
+    </UserControl.Resources>
+    <Grid Name="GameBoard" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <!-- You need to specify how many rows you'll need -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Image Name="Spot00" Grid.Row="0" Grid.Column="0">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 0}"/>
+                    <Binding Source="{StaticResource 0}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot01" Grid.Row="0" Grid.Column="1">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 0}"/>
+                    <Binding Source="{StaticResource 1}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot02" Grid.Row="0" Grid.Column="2">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 0}"/>
+                    <Binding Source="{StaticResource 2}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot03" Grid.Row="0" Grid.Column="3">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 0}"/>
+                    <Binding Source="{StaticResource 3}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot04" Grid.Row="0" Grid.Column="4">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 0}"/>
+                    <Binding Source="{StaticResource 4}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot05" Grid.Row="0" Grid.Column="5">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 0}"/>
+                    <Binding Source="{StaticResource 5}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot06" Grid.Row="0" Grid.Column="6">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 0}"/>
+                    <Binding Source="{StaticResource 6}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot10" Grid.Row="1" Grid.Column="0">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 1}"/>
+                    <Binding Source="{StaticResource 0}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot11" Grid.Row="1" Grid.Column="1">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 1}"/>
+                    <Binding Source="{StaticResource 1}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot12" Grid.Row="1" Grid.Column="2">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 1}"/>
+                    <Binding Source="{StaticResource 2}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot13" Grid.Row="1" Grid.Column="3">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 1}"/>
+                    <Binding Source="{StaticResource 3}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot14" Grid.Row="1" Grid.Column="4">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 1}"/>
+                    <Binding Source="{StaticResource 4}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot15" Grid.Row="1" Grid.Column="5">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 1}"/>
+                    <Binding Source="{StaticResource 5}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot16" Grid.Row="1" Grid.Column="6">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 1}"/>
+                    <Binding Source="{StaticResource 6}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot20" Grid.Row="2" Grid.Column="0">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 2}"/>
+                    <Binding Source="{StaticResource 0}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot21" Grid.Row="2" Grid.Column="1">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 2}"/>
+                    <Binding Source="{StaticResource 1}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot22" Grid.Row="2" Grid.Column="2">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 2}"/>
+                    <Binding Source="{StaticResource 2}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot23" Grid.Row="2" Grid.Column="3">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 2}"/>
+                    <Binding Source="{StaticResource 3}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot24" Grid.Row="2" Grid.Column="4">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 2}"/>
+                    <Binding Source="{StaticResource 4}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot25" Grid.Row="2" Grid.Column="5">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 2}"/>
+                    <Binding Source="{StaticResource 5}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot26" Grid.Row="2" Grid.Column="6">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 2}"/>
+                    <Binding Source="{StaticResource 6}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot30" Grid.Row="3" Grid.Column="0">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 3}"/>
+                    <Binding Source="{StaticResource 0}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot31" Grid.Row="3" Grid.Column="1">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 3}"/>
+                    <Binding Source="{StaticResource 1}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot32" Grid.Row="3" Grid.Column="2">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 3}"/>
+                    <Binding Source="{StaticResource 2}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot33" Grid.Row="3" Grid.Column="3">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 3}"/>
+                    <Binding Source="{StaticResource 3}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot34" Grid.Row="3" Grid.Column="4">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 3}"/>
+                    <Binding Source="{StaticResource 4}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot35" Grid.Row="3" Grid.Column="5">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 3}"/>
+                    <Binding Source="{StaticResource 5}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot36" Grid.Row="3" Grid.Column="6">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 3}"/>
+                    <Binding Source="{StaticResource 6}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot40" Grid.Row="4" Grid.Column="0">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 4}"/>
+                    <Binding Source="{StaticResource 0}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot41" Grid.Row="4" Grid.Column="1">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 4}"/>
+                    <Binding Source="{StaticResource 1}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot42" Grid.Row="4" Grid.Column="2">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 4}"/>
+                    <Binding Source="{StaticResource 2}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot43" Grid.Row="4" Grid.Column="3">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 4}"/>
+                    <Binding Source="{StaticResource 3}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot44" Grid.Row="4" Grid.Column="4">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 4}"/>
+                    <Binding Source="{StaticResource 4}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot45" Grid.Row="4" Grid.Column="5">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 4}"/>
+                    <Binding Source="{StaticResource 5}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot46" Grid.Row="4" Grid.Column="6">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 4}"/>
+                    <Binding Source="{StaticResource 6}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot50" Grid.Row="5" Grid.Column="0">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 5}"/>
+                    <Binding Source="{StaticResource 0}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot51" Grid.Row="5" Grid.Column="1">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 5}"/>
+                    <Binding Source="{StaticResource 1}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot52" Grid.Row="5" Grid.Column="2">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 5}"/>
+                    <Binding Source="{StaticResource 2}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot53" Grid.Row="5" Grid.Column="3">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 5}"/>
+                    <Binding Source="{StaticResource 3}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot54" Grid.Row="5" Grid.Column="4">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 5}"/>
+                    <Binding Source="{StaticResource 4}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot55" Grid.Row="5" Grid.Column="5">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 5}"/>
+                    <Binding Source="{StaticResource 5}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Image Name="Spot56" Grid.Row="5" Grid.Column="6">
+            <Image.Source>
+                <MultiBinding Converter="{StaticResource MultiDimensionalCoverter}">
+                    <Binding Path="GameBoard"/>
+                    <Binding Source="{StaticResource 5}"/>
+                    <Binding Source="{StaticResource 6}"/>
+                </MultiBinding>
+            </Image.Source>
+        </Image>
+        <Button Name="DropColumn0" Tag="0" Content="Drop Piece" Grid.Row="6" Grid.Column="0" Command="{Binding DropCommand}" CommandParameter="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="True" />
+        <Button Name="DropColumn1" Tag="1" Content="Drop Piece" Grid.Row="6" Grid.Column="1" Command="{Binding DropCommand}" CommandParameter="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn2" Tag="2" Content="Drop Piece" Grid.Row="6" Grid.Column="2" Command="{Binding DropCommand}" CommandParameter="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn3" Tag="3" Content="Drop Piece" Grid.Row="6" Grid.Column="3" Command="{Binding DropCommand}" CommandParameter="3" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn4" Tag="4" Content="Drop Piece" Grid.Row="6" Grid.Column="4" Command="{Binding DropCommand}" CommandParameter="4" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn5" Tag="5" Content="Drop Piece" Grid.Row="6" Grid.Column="5" Command="{Binding DropCommand}" CommandParameter="5" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="DropColumn6" Tag="6" Content="Drop Piece" Grid.Row="6" Grid.Column="6" Command="{Binding DropCommand}" CommandParameter="6" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="Reset" Tag="7" Content="Reset" Grid.Row="7" Grid.Column="3" Command="{Binding ResetCommand}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <WrapPanel Grid.Row="7" Grid.Column="1" MaxWidth="100">
+            <Label Name="ScoreLabel" Content="Score:" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Padding="0"/>
+            <Label Name="P1ScoreLabel" Content="Player 1 - " FontSize="12" Padding="20 0 0 0"/>
+            <TextBlock Name="P1Score" Text="{Binding Player1Score}" FontSize="12" Padding="0"/>
+            <Label Name="P2ScoreLabel" Content="Player 2 - " FontSize="12" Padding="20 0 0 0"/>
+            <TextBlock Name="P2Score" Text="{Binding Player2Score}" FontSize="12" Padding="0"/>
+        </WrapPanel>
+    </Grid>
+</UserControl>
